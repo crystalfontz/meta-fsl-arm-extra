@@ -17,6 +17,8 @@ KERNEL_DEVICETREE = "imx28-cfa10036.dtb"
 # we need the kernel to be installed in the final image
 IMAGE_INSTALL_append = " kernel-image kernel-devicetree"
 
+IMAGE_INSTALL_append += " init-ifupdown busybox-udhcpd"
+
 SDCARD_ROOTFS ?= "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ext3"
 IMAGE_FSTYPES ?= "tar.bz2 ext3 barebox.mxsboot-sdcard sdcard"
 
