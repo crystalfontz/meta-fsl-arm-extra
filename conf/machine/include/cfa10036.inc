@@ -17,12 +17,12 @@ KERNEL_DEVICETREE = "imx28-cfa10036.dtb"
 # we need the kernel to be installed in the final image
 IMAGE_INSTALL_append = " kernel-image kernel-devicetree"
 
-SDCARD_ROOTFS ?= "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ext3"
-IMAGE_FSTYPES ?= "tar.bz2 ext3 barebox.mxsboot-sdcard sdcard"
+SDCARD_ROOTFS ?= "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ext4"
+IMAGE_FSTYPES ?= "tar.bz2 ext4 barebox.mxsboot-sdcard sdcard"
 
 SERIAL_CONSOLE = "115200 ttyAMA0"
 
-MACHINE_FEATURES = "apm usbgadget usbhost vfat"
+MACHINE_FEATURES = "usbgadget usbhost vfat"
 
 # Avoid adding gst-fsl-plugin as we use non-FSL kernel
 MACHINE_GSTREAMER_PLUGIN_cfa10036 = ""

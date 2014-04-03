@@ -248,7 +248,7 @@ index 0000000..b084ed4
 +/************************************************
 + *		Default command line		*
 + ************************************************/
-+char cmdline_def[] = "console=ttyAMA0,115200";
++char cmdline_def[] = "console=ttyAMA0,115200 consoleblank=0";
 diff --git a/linux_prep/cmdlines/cfa10036.txt b/linux_prep/cmdlines/cfa10036.txt
 new file mode 100644
 index 0000000..486ffe8
